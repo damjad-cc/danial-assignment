@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each val,idx in result
+      li= val.adr+' - '+val.title
+
+  hr
+  h2 Click on Below Link for a Quick Test Run
+  ul
+    li
+      a(href="http://localhost:8080/I/want/title/?address=www.dawn.com/events/") Dawn News
+    li
+      a(href="http://localhost:8080/I/want/title/?address=http://www.google.com&address=http://www.geo.tv&address=http://news.google.com") Googole - GeoTv - Google News
+    li
+      a(href="http://localhost:8080/I/want/title/?address=http://www.cricinfo.com&address=https://www.facebook.com") CricInfo - Facebook
+    li
+      a(href="http://localhost:8080/I/want/title/?address=cnn.com") Without HTTP CNN
+    li
+      a(href="http://localhost:8080/I/want/title/?address=invalid-url") Invalid - URL
