@@ -11,10 +11,6 @@ var appRoute = new express.Router();
 
 module.exports = function (container) {
 
-    appRoute.get('', function(req, res){
-
-    });
-
     appRoute.get('/I/want/title/', function(req, res){
         let urls = req.query['address'] || [];
         if(typeof urls === 'string') {

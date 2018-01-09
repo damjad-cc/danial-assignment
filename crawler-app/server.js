@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use("", routes);
 
-app.use(function(req, res, next){
+app.use('*',function(req, res, next){
     res.status(404);
     res.render('404', { url: req.url });
     return;
